@@ -4,13 +4,13 @@ IMPORTANT: Make sure that Travis and Netlify is set up and using !!!GITHUB_PROJE
 
 # !!!OPTIONAL_EMOJI !!!PROJECT_NAME
 
-<!-- [![](https://img.shields.io/badge/openup--content--starter-0.0.1-blue.svg)](#) --> <!--[![](https://travis-ci.org/OpenUpSA/!!!GITHUB_PROJECT_NAME.svg?branch=master)](https://travis-ci.org/OpenUpSA/!!!GITHUB_PROJECT_NAME) --> <!--  [![](https://api.netlify.com/api/v1/badges/!!!NETLIFY_PROJECT_API_KEY/deploy-status)](https://app.netlify.com/sites/!!!GITHUB_PROJECT_NAME/deploys) -->
+[![](https://img.shields.io/badge/openup--content--starter-0.0.1-blue.svg)](https://github.com/OpenUpSA/react-webapp-starters) <!--[![](https://travis-ci.org/OpenUpSA/!!!GITHUB_PROJECT_NAME.svg?branch=master)](https://travis-ci.org/OpenUpSA/!!!GITHUB_PROJECT_NAME) --> <!--  [![](https://api.netlify.com/api/v1/badges/!!!NETLIFY_PROJECT_API_KEY/deploy-status)](https://app.netlify.com/sites/!!!GITHUB_PROJECT_NAME/deploys) -->
 
-**Kheta is an open-source tool created in partnership with Social Surveys Africa to engagement in the 2019 national election**
+**!!PROJECT_ONE_LINE_DESCRIPTION**
 
 ## Contributor instructions:
 
-_If you have any questions about the following instructions please get in touch with us via [our core-team Slack workspace](https://openupsa.slack.com) (if you have access) or send an email to [schalk@openup.org.za](mailto:schalk@openup.org.za)._
+*If you have any questions about the following instructions please get in touch with us via [our core-team Slack workspace](https://openupsa.slack.com) (if you have access) or send an email to [schalk@openup.org.za](mailto:schalk@openup.org.za).*
 
 ### 🌱 1. Set up local environment
 
@@ -19,7 +19,7 @@ _If you have any questions about the following instructions please get in touch 
 3. Make sure you have the latest release of [Yarn](https://yarnpkg.com/en/docs/install) installed.
 4. Run `yarn` in the root folder of the repository to install all dependancies.
 
-### ❤️ 3. Contribute
+### 👓 2. Read our documentation
 
 1. Please familiarise yourself with [this project's architecture and guidelines](#) before proceding.
 
