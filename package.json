@@ -1,0 +1,12 @@
+{
+  "name": "react-webapp-starters",
+  "version": "0.0.1",
+  "private": true,
+  "workspaces": [
+    "openup-content-starter"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "lerna": "^3.13.1"
+  }
+}
