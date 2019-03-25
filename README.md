@@ -3,7 +3,7 @@
 **A collection of standardised, open-sourced and well-documented project starters used to bootstrap React webapps at OpenUp.**
 
 - [🚀 Getting Started](#%F0%9F%9A%80-getting-started)
-  - [Openup Content Starter](#openup-content-starter)
+  - [OpenUp Content Starter](#openup-content-starter)
 - [⭐ Goals](#%E2%AD%90-goals)
   - [Self-driven onboarding](#self-driven-onboarding)
   - [Comprehensive scope](#comprehensive-scope)
@@ -16,11 +16,11 @@
 
 At this point you are required to clone and manually copy the folder that you need from `packages/`. After copying the required starter follow the per-starter instructions as below:
 
-### Openup Content Starter
+### OpenUp Content Starter
 
 This starter is built for straight-forward content/document driven projects. In other words, web projects that follow a traditional *load page*, *click on link*, *load new page* (repeat every time a user navigates to new content) model.
 
-These projects have very limited interactivity and do not preserve state between page transitions. Futhermore, they have no conception of a user (either as anonomyous or logged in).
+These projects have very limited interactivity and do not preserve state between page transitions. Furthermore, they have no conception of a user (either as anonymous or logged in).
 
 Examples might include:
 - A hardcoded micro-site.
