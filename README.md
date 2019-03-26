@@ -3,7 +3,8 @@
 **A collection of standardised, open-sourced and well-documented project starters used to bootstrap React webapps at OpenUp.**
 
 - [🚀 Getting Started](#%F0%9F%9A%80-getting-started)
-  - [Openup Content Starter](#openup-content-starter)
+  - [Page Driven Starter](#page-driven-starter)
+  - [Client Side Starter](#client-side-starter)
 - [⭐ Goals](#%E2%AD%90-goals)
   - [Self-driven onboarding](#self-driven-onboarding)
   - [Comprehensive scope](#comprehensive-scope)
@@ -16,7 +17,12 @@
 
 At this point you are required to clone and manually copy the folder that you need from `packages/`. After copying the required starter follow the per-starter instructions as below:
 
-### Openup Content Starter
+- [Page Driven Starter](#page-driven-starter)
+- [Client Side Starter](#)
+
+### Page Driven Starter
+
+[![](https://img.shields.io/badge/page--driven--starter-0.1.1-blue.svg)](https://github.com/OpenUpSA/react-webapp-starters/tree/master/docs/starters/page-driven-starter.md) 
 
 This starter is built for straight-forward content/document driven projects. In other words, web projects that follow a traditional *load page*, *click on link*, *load new page* (repeat every time a user navigates to new content) model.
 
@@ -27,7 +33,22 @@ Examples might include:
 - A CMS-driven website showcasing an organisation's work (with a contact form).
 - A very simple directory site based off JSON files.
 
-[Use the OpenUp Content Starter](https://github.com/OpenUpSA/react-webapp-starters/tree/master/docs/starters/openup-content-starter.md)
+[Use the Page Driven Starter](https://github.com/OpenUpSA/react-webapp-starters/tree/master/docs/starters/page-driven-starter.md)
+
+### Client Side Starter
+
+[![](https://img.shields.io/badge/client--side--starter-0.1.1-blue.svg)](https://github.com/OpenUpSA/react-webapp-starters/tree/master/docs/starters/client-side-starter.md) 
+
+This starter is built when a React webapp needs to be integrated into existing server-side templating. For example a project already does templating with Django, Jekyll, PHP, etc. Alternatively, this starter is also usefull when we want to embed a webapp in a third-party page that we have no control over.
+
+Note that code-splitting will be added in future versions of this starter in order to make it more performant.
+
+Example might include:
+- Integrating a small React widgets into an existing Django project.
+- As a temporary solution while a server-side templating project is transitioned to one of the other React starters.
+- Providing partners with a single JavaScript file they can embed in their site delivered from a Netlify CDN.
+
+[Use the Client Side Starter](https://github.com/OpenUpSA/react-webapp-starters/tree/master/docs/starters/client-side-starter.md)
 
 ## ⭐ Goals
 **The creation (and all further iterations) of these starter are driven by the following four goals:**
