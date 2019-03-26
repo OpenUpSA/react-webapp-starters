@@ -30,3 +30,12 @@ export type TisLoading = boolean;
  * Function to call when button is clicked.
  */
 export type TclickHandler = () => any;
+
+type Tname = string;
+type Toutput = string;
+
+interface TestObject {
+  name: Tname;
+  input?: Ttheme,
+  output: Toutput,
+}

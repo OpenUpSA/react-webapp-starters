@@ -4,7 +4,7 @@ IMPORTANT: Make sure that Travis and Netlify is set up and using !!!GITHUB_PROJE
 
 # !!!OPTIONAL_EMOJI !!!PROJECT_NAME
 
-[![](https://img.shields.io/badge/openup--content--starter-0.0.1-blue.svg)](https://github.com/OpenUpSA/react-webapp-starters) <!--[![](https://travis-ci.org/OpenUpSA/!!!GITHUB_PROJECT_NAME.svg?branch=master)](https://travis-ci.org/OpenUpSA/!!!GITHUB_PROJECT_NAME) --> <!--  [![](https://api.netlify.com/api/v1/badges/!!!NETLIFY_PROJECT_API_KEY/deploy-status)](https://app.netlify.com/sites/!!!GITHUB_PROJECT_NAME/deploys) -->
+[![](https://img.shields.io/badge/openup--content--starter-0.1.1-blue.svg)](https://github.com/OpenUpSA/react-webapp-starters) <!--[![](https://travis-ci.org/OpenUpSA/!!!GITHUB_PROJECT_NAME.svg?branch=master)](https://travis-ci.org/OpenUpSA/!!!GITHUB_PROJECT_NAME) --> <!--  [![](https://api.netlify.com/api/v1/badges/!!!NETLIFY_PROJECT_API_KEY/deploy-status)](https://app.netlify.com/sites/!!!GITHUB_PROJECT_NAME/deploys) -->
 
 **!!PROJECT_ONE_LINE_DESCRIPTION**
 

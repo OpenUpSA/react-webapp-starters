@@ -5,7 +5,6 @@ import { storiesOf } from '@storybook/react';
 import faker from 'faker';
 import { text, boolean, select } from '@storybook/addon-knobs';
 import { CssBaseline } from '@material-ui/core';
-import calcThemeShade from './calcThemeShade';
 
 import content from './README.md';
 import Button from './index';
@@ -30,15 +29,6 @@ const ComponentWithKnobs = (props: any): JSX.Element => {
   );
 };
 
-const helpers = () => (
-  <Fragment>
-    <CssBaseline />
-    <code><pre>calcThemeShade() --> {calcThemeShade()}</pre></code>
-    <code><pre>calcThemeShade('light') --> {calcThemeShade('light')}</pre></code>
-    <code><pre>calcThemeShade('dark') --> {calcThemeShade('dark')}</pre></code>
-  </Fragment>
-);
-
 const basic = (): JSX.Element => <ComponentWithKnobs />;
 const primary = (): JSX.Element => <ComponentWithKnobs primary />;
 const lightTheme = (): JSX.Element => <ComponentWithKnobs theme="light" />;
@@ -54,7 +44,6 @@ const readmeConfig = {
 
 storiesOf('component.Button', module)
   .add('README', () => <div />, readmeConfig)
-  .add('HELPERS', helpers)
   .add('Basic', basic)
   .add('Primary', primary)
   .add('Light Theme', lightTheme)
