@@ -1,0 +1,1 @@
+import './adaptors/button-connection';
