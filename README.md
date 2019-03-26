@@ -26,7 +26,7 @@ At this point you are required to clone and manually copy the folder that you ne
 
 This starter is built for straight-forward content/document driven projects. In other words, web projects that follow a traditional *load page*, *click on link*, *load new page* (repeat every time a user navigates to new content) model.
 
-These projects have very limited interactivity and do not preserve state between page transitions. Futhermore, they have no conception of a user (either as anonomyous or logged in).
+These projects have very limited interactivity and do not preserve state between page transitions. Furthermore, they have no conception of a user (either as anonymous or logged in).
 
 Examples might include:
 - A hardcoded micro-site.
