@@ -1,3 +1,0 @@
-# Create Openup Content Starter
-
-Instructions pending...
