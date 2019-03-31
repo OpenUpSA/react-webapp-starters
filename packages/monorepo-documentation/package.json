@@ -1,0 +1,17 @@
+{
+  "name": "monorepo-documentation",
+  "version": "0.0.1",
+  "license": "MIT",
+  "scripts": {
+    "start": "docz dev",
+    "build": "docz build"
+  },
+  "devDependencies": {
+    "docz": "^1.0.0-rc.6",
+    "docz-theme-default": "^1.0.0-rc.6"
+  },
+  "dependencies": {
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  }
+}
