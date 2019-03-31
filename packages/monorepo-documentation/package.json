@@ -4,10 +4,12 @@
   "license": "MIT",
   "scripts": {
     "start": "docz dev",
-    "build": "docz build"
+    "build:docs": "docz build",
+    "build": "yarn build:docs"
   },
   "devDependencies": {
     "docz": "^1.0.0-rc.6",
+    "docz-core": "^0.13.7",
     "docz-theme-default": "^1.0.0-rc.6"
   },
   "dependencies": {
