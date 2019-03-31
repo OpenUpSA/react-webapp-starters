@@ -1,11 +1,9 @@
 {
   "name": "react-webapp-starters",
   "private": true,
-  "workspaces": [
-    "client-side-starter",
-    "monorepo-documentation",
-    "page-driven-starter"
-  ],
+  "workspaces": {
+    "packages": ["packages/*"]
+  },
   "scripts": {
     "test": "lerna run test && lerna run build",
     "build:docs": "lerna run build:docs"
