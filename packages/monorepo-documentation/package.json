@@ -9,7 +9,6 @@
   },
   "devDependencies": {
     "docz": "^1.0.0-rc.6",
-    "docz-core": "^0.13.7",
     "docz-theme-default": "^1.0.0-rc.6"
   },
   "dependencies": {

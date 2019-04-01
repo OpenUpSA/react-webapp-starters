@@ -5,7 +5,6 @@
     "build:gatsby": "gatsby build",
     "build": "yarn build:gatsby",
     "start:cypress": "cypress open",
-    "start:docs": "docz dev",
     "start:gatsby:open": "gatsby develop -o",
     "start:gatsby": "gatsby develop",
     "start:serve": "gatsby build && gatsby serve -o",
