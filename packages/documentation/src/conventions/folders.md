@@ -4,12 +4,12 @@ menu: Conventions
 route: /conventions/folders
 ---
 
-# 🗄 Folder Structure
+# 📦 Folder Structure
 
 - [📡 Data](#%F0%9F%93%A1-data)
   - [Flat-file database](#flat-file-database)
   - [Constants](#constants)
-- [📦 Assets](#%F0%9F%93%A6-assets)
+- [🧦 Assets](#%F0%9F%A7%A6-assets)
 - [⚙️ Tokens](#%E2%9A%99%EF%B8%8F-tokens)
 - [🔨 Helpers](#%F0%9F%94%A8-helpers)
 - [📐 Types](#%F0%9F%93%90-types)
@@ -25,30 +25,14 @@ The project is broken into encapsulated semantic units each starting at their br
 
 Everything outside of the `/src/` folder can be considered workflow configuration files (these include files like `jest.config.js`, `package.json` and `.eslintrc`) and should not be considered as part of the above organisational pattern. It can be assumed that all files outside of `src/` is not used in the code itself but rather as configuration used by a specific NPM scripts (for example `yarn test:lint`) or third-party integrations (for example `.travisrc`).
 
-The most barebones webapps needs the following:
+Even the most barebones webapp (at the very least) needs [👀 Views](#%F0%9F%91%80-views) to render pieces of UI. However, you will also need to send these views to the user either through [🔌 Adaptors](#%F0%9F%94%8C-adaptors) when you are using existing server-side templating or via [📪 Pages](#%F0%9F%93%AA-pages) if you are using GatsbyJS to generate static HTML files.
 
-- [👀 Views](#%F0%9F%91%80-views) that create a piece of UI.
-- A way to provide those views to users, either via:
-  - [🔌 Adaptors](#%F0%9F%94%8C-adaptors) with existing server-side templating
-  - [📪 Pages](#%F0%9F%93%AA-pages) in the form of static HTML files created by Gatsby.
+In addition as the project grows we probably don't want to hardcode data straight into our views. This means that we will use a [📡 data](#%F0%9F%93%A1-data) folder to store our data `.json` (or `.md` if using GatsbyJS ) files. We can then import these directly into our code via ES Modules, or via GraphQL in Gatsby (we can even build pages programmatically based on data via [📬 Templates](#%F0%9F%93%AC-templates))
+In order to annotate our JSON data schema we might also want to add TypeScript declarations in [📐 Types](#%F0%9F%93%90-types). Complimentary to the data folder, we might also want to save all non-`.json` or non-`.md` files in [🧦 Assets](#%F0%9F%A7%A6-assets) - this would include media files, images, etc. Lastly, if we want non-tech contributors to manage, edit or create data we can use Netlify CMS via [👤 Cms](#%F0%9F%91%A4-cms) to spin up a serverless Git-based CMS.
 
+Furthermore, in order to scale our UI as our code grows it might be worth break some of our views into smaller re-composable units. Firstly we can break pieces of UI in [♻️ Components](#%E2%99%BB%EF%B8%8F-components) that you can share amongst views. You might also want to break re-usable low-level design features (like font stacks or brand colors) into [⚙️ Tokens](#%E2%9A%99%EF%B8%8F-tokens) or functions that are shared amongst different modules into [🔨 Helpers](#%F0%9F%94%A8-helpers).
 
-In addition you probably don't want hardcode data into your views themselves. This means that you might also want to add the following:
-- [📡 data](#%F0%9F%93%A1-data) in the form of local `.json` or `.md` files.
-- [👤 Cms](#%F0%9F%91%A4-cms) in the form of Netlify CMS so that contributors can add/modify local data.
-- [📬 Templates](#%F0%9F%93%AC-templates) in order to build static HTML files based on local data.
-
-We might also want to enhance our local data with the following:
-- [📐 Types](#%F0%9F%93%90-types) in the form of TypeScript declarations to annotate our data schema.
-- [📦 Assets](#%F0%9F%93%A6-assets) if we want to store non-`.json`/`.md` files - can be managed via CMS.
-
-Furthermore, in order to scale our UI as our code grows it might be worth it to break views into composable units:
-- [♻️ Components](#%E2%99%BB%EF%B8%8F-components) as reusable UI parts that get shared amongst views.
-- [⚙️ Tokens](#%E2%9A%99%EF%B8%8F-tokens) low-level visual design patterns used throughout the project.
-- [🔨 Helpers](#%F0%9F%94%A8-helpers) JavaScript functions that abstract away common processes.
-
-Once our project starts getting complex enough it might be worthile to add the following:
-- [🎠 Redux](#%F0%9F%8E%A0-redux) containing all Redux code used to save, load and manipulate global project state.
+Once our project starts getting complex enough it might be worthile to add the following [🎠 Redux](#%F0%9F%8E%A0-redux) containing all Redux code used to save, load and manipulate global project state.
 
 ## 📡 Data
 
@@ -150,7 +134,7 @@ This is helpful if you want to for example store a list of the languages used in
 
 The above is useful if you don't have GatsbyJS in your stack or you just want to pull the data in directly without booting up the entire Gatsby GraphQL process just to retrieve the above. 
 
-## 📦 Assets
+## 🧦 Assets
 
 **In short, the `/src/assets` folder is essentially for files that the browsers do not parse directly, but merely embed or download from a page.**
 
