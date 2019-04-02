@@ -1,7 +1,7 @@
 ---
 name: Page Driven Starter
 menu: Starters
-route: /starters/Page Driven Starter
+route: /starters/page-driven-starter
 ---
 
 # 📜 Page Driven Starter

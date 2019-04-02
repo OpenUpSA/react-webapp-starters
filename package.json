@@ -2,7 +2,11 @@
   "name": "react-webapp-starters",
   "private": true,
   "workspaces": {
-    "packages": ["packages/*"]
+    "packages": [
+      "client-side-starter",
+      "documentation",
+      "page-driven-starter"
+    ]
   },
   "scripts": {
     "test": "lerna run test && lerna run build",

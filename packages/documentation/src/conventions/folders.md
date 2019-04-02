@@ -6,53 +6,51 @@ route: /conventions/folders
 
 # 🗄 Folder Structure
 
-- [Overview](#overview)
-- [Recommended Folders](#recommended-folders)
-  - [🗃 `data`](#%F0%9F%97%83-data)
-    - [Flat-file database](#flat-file-database)
-    - [Constants](#constants)
-  - [🖼 `assets`](#%F0%9F%96%BC-assets)
-  - [⚙️ `tokens`](#%E2%9A%99%EF%B8%8F-tokens)
-  - [🔨 `helpers`](#%F0%9F%94%A8-helpers)
-  - [📐 `types`](#%F0%9F%93%90-types)
-  - [🖼 `views`](#%F0%9F%96%BC-views)
-  - [♻️ `components`](#%E2%99%BB%EF%B8%8F-components)
-- [Optional Folders](#optional-folders)
-  - [🔌 `adaptors`](#%F0%9F%94%8C-adaptors)
-  - [📪 `pages`](#%F0%9F%93%AA-pages)
-  - [📬 `templates`](#%F0%9F%93%AC-templates)
-  - [🕹 `redux`](#%F0%9F%95%B9-redux)
-  - [👤 `cms`](#%F0%9F%91%A4-cms)
-
-## Overview
+- [📡 Data](#%F0%9F%93%A1-data)
+  - [Flat-file database](#flat-file-database)
+  - [Constants](#constants)
+- [📦 Assets](#%F0%9F%93%A6-assets)
+- [⚙️ Tokens](#%E2%9A%99%EF%B8%8F-tokens)
+- [🔨 Helpers](#%F0%9F%94%A8-helpers)
+- [📐 Types](#%F0%9F%93%90-types)
+- [👀 Views](#%F0%9F%91%80-views)
+- [♻️ Components](#%E2%99%BB%EF%B8%8F-components)
+- [🔌 Adaptors](#%F0%9F%94%8C-adaptors)
+- [📪 Pages](#%F0%9F%93%AA-pages)
+- [📬 Templates](#%F0%9F%93%AC-templates)
+- [🎠 Redux](#%F0%9F%8E%A0-redux)
+- [👤 Cms](#%F0%9F%91%A4-cms)
 
 The project is broken into encapsulated semantic units each starting at their broadest level from the `/src/` folder downwards.
 
 Everything outside of the `/src/` folder can be considered workflow configuration files (these include files like `jest.config.js`, `package.json` and `.eslintrc`) and should not be considered as part of the above organisational pattern. It can be assumed that all files outside of `src/` is not used in the code itself but rather as configuration used by a specific NPM scripts (for example `yarn test:lint`) or third-party integrations (for example `.travisrc`).
 
-At it's core all projects should have the following three folders in `/src/`:
+The most barebones webapps needs the following:
 
-- [🗃 `data`](#%F0%9F%97%83-data)
-- [🖼 `views`](#%F0%9F%96%BC-views)
-- [♻️ `components`](#%E2%99%BB%EF%B8%8F-components)
+- [👀 Views](#%F0%9F%91%80-views) that create a piece of UI.
+- A way to provide those views to users, either via:
+  - [🔌 Adaptors](#%F0%9F%94%8C-adaptors) with existing server-side templating
+  - [📪 Pages](#%F0%9F%93%AA-pages) in the form of static HTML files created by Gatsby.
 
-It is recommend that the following folders also be added to house supplementary files.
 
-- [🖼 `assets`](#%F0%9F%96%BC-assets)
-- [⚙️ `tokens`](#%E2%9A%99%EF%B8%8F-tokens)
-- [🔨 `helpers`](#%F0%9F%94%A8-helpers)
-- [📐 `types`](#%F0%9F%93%90-types)
+In addition you probably don't want hardcode data into your views themselves. This means that you might also want to add the following:
+- [📡 data](#%F0%9F%93%A1-data) in the form of local `.json` or `.md` files.
+- [👤 Cms](#%F0%9F%91%A4-cms) in the form of Netlify CMS so that contributors can add/modify local data.
+- [📬 Templates](#%F0%9F%93%AC-templates) in order to build static HTML files based on local data.
 
-Lastly the following folders are optional and might only be present if a specific technology is included in the project's tech stack:
+We might also want to enhance our local data with the following:
+- [📐 Types](#%F0%9F%93%90-types) in the form of TypeScript declarations to annotate our data schema.
+- [📦 Assets](#%F0%9F%93%A6-assets) if we want to store non-`.json`/`.md` files - can be managed via CMS.
 
-- [🔌 `adaptors`](#%F0%9F%94%8C-adaptors)
-- [📪 `pages`](#%F0%9F%93%AA-pages)
-- [📬 `templates`](#%F0%9F%93%AC-templates)
-- [🕹 `redux`](#%F0%9F%95%B9-redux)
+Furthermore, in order to scale our UI as our code grows it might be worth it to break views into composable units:
+- [♻️ Components](#%E2%99%BB%EF%B8%8F-components) as reusable UI parts that get shared amongst views.
+- [⚙️ Tokens](#%E2%9A%99%EF%B8%8F-tokens) low-level visual design patterns used throughout the project.
+- [🔨 Helpers](#%F0%9F%94%A8-helpers) JavaScript functions that abstract away common processes.
 
-## Recommended Folders
+Once our project starts getting complex enough it might be worthile to add the following:
+- [🎠 Redux](#%F0%9F%8E%A0-redux) containing all Redux code used to save, load and manipulate global project state.
 
-### 🗃 `data`
+## 📡 Data
 
 **In short, the `/src/data` folder is essentially a flat-file database that can be access during project build time (when webpack runs).**
 
@@ -61,7 +59,7 @@ Two types of files are usually stored in `/src/data/`. These are: `.json` and `.
 - [Flat-file database](#flat-file-database)
 - [Constants](#constants)
 
-#### Flat-file database
+### Flat-file database
 
 *NOTE: Please proceed straight to the Hardcoded Data section if you project is not using GatsbyJS*
 
@@ -126,7 +124,7 @@ The above creates a two way mapping between two types of data (posts and categor
 }
 ```
 
-#### Constants
+### Constants
 
 *NOTE: Constants should only go into `/src/data` if they are used in more than one module. If they are only used in one module then they can be placed in a `data.json` file inside the module. For example `/src/helpers/calculateValueAddedTax/data.json`.*
 
@@ -152,7 +150,7 @@ This is helpful if you want to for example store a list of the languages used in
 
 The above is useful if you don't have GatsbyJS in your stack or you just want to pull the data in directly without booting up the entire Gatsby GraphQL process just to retrieve the above. 
 
-### 🖼 `assets`
+## 📦 Assets
 
 **In short, the `/src/assets` folder is essentially for files that the browsers do not parse directly, but merely embed or download from a page.**
 
@@ -196,16 +194,16 @@ The latter prevents the component folder from becoming too noisy.
 
 However, in cases where an asset is re-used in more than one module they should be placed globally in the `/src/assets/` folder. For example the project logo might be saved in `/src/assets/logo/large.png` and `/src/assets/logo/small.png`.
 
-### ⚙️ `tokens`
+## ⚙️ Tokens
 ...Description pending...
 
-### 🔨 `helpers`
+## 🔨 Helpers
 ...Description pending...
 
-### 📐  `types`
+## 📐  Types
 ...Description pending...
 
-### 🖼 `views`
+## 👀 Views
 
 **Views are React components that output actual markup and styling (in short the designed UI that the user sees in the browser).**
 
@@ -403,7 +401,7 @@ views
         └── README.md
 ```
 
-### ♻️ `components`
+## ♻️ Components
 
 **Components are essentially modular pieces that are shared between more than one views**
 
@@ -432,12 +430,10 @@ It can then be reused in the following files:
 
 *NOTE: Humans are notoriously bad at predicting the future. Therefore `/src/components/` should not be your first port of call if you are not 100% certain that you will use a piece of UI again. Rather (as a rule of thumb) embed a sub-component in the context where it is used and then only extract it into a modular version in `/src/components/` once you've used it at least two times in the project.*
 
-## Optional Folders
-
-### 🔌 `adaptors`
+## 🔌 Adaptors
 ...Description Pending...
 
-### 📪 `pages`
+## 📪 Pages
 
 **If the project is using GatsbyJS then the `src/pages` folder is reserved to create hard-coded routes.**
 
@@ -541,7 +537,7 @@ export default render();
 
 You can learn more about `/src/pages/` in the ['Pages' section in the Gatsby documenation](https://www.gatsbyjs.org/docs/recipes/#creating-pages)
 
-### 📬 `templates`
+## 📬 Templates
 
 **If the project is using GatsbyJS then the `src/pages` folder is reserved to routes created programatically from data.**
 
@@ -572,8 +568,8 @@ templates
         └── details.ts
 ```
 
-### 🕹 `redux`
+## 🎠 Redux
 ...Description Pending...
 
-### 👤 `cms`
+## 👤 Cms
 ...Description Pending...

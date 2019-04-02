@@ -15,7 +15,7 @@ To get started you might want to do one of the following:
 - [🚚 Roadmap](/about/roadmap/)
 
 ## Conventions
-- [🗄 Folders](/conventions/folders/)
+- [📦 Folders](/conventions/folders/)
 
 ## Guides
 - [🚀 Use a starter from scratch](/guides/start/)
