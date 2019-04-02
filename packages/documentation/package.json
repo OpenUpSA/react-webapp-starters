@@ -8,8 +8,8 @@
     "build": "yarn build:docs"
   },
   "devDependencies": {
-    "docz": "^1.0.0",
-    "docz-theme-default": "^1.0.0"
+    "docz": "1.0.0-rc.6",
+    "docz-theme-default": "1.0.0-rc.6"
   },
   "dependencies": {
     "react": "^16.8.6",
