@@ -22,6 +22,7 @@ route: /conventions/folders
   - [📪 `pages`](#%F0%9F%93%AA-pages)
   - [📬 `templates`](#%F0%9F%93%AC-templates)
   - [🕹 `redux`](#%F0%9F%95%B9-redux)
+  - [👤 `cms`](#%F0%9F%91%A4-cms)
 
 ## Overview
 
@@ -572,4 +573,7 @@ templates
 ```
 
 ### 🕹 `redux`
+...Description Pending...
+
+### 👤 `cms`
 ...Description Pending...
