@@ -15,7 +15,7 @@ To get started you might want to do one of the following:
 - [🚚 Roadmap](/about/roadmap/): See the upcoming features that will be included in upcoming starters or versions of starters.
 
 ## Conventions
-- [📦 Folders](/conventions/folders/): Learn the folder structure that is used throughout all starters. Recommended if you want to contribute to a project based on a starter.
+- [📦 Folders](/conventions/folders/): Learn the folder structure that is used throughout all starters.
 
 ## Guides
 - [🚀 Use a starter from scratch](/guides/start/): Bootstrap a project with one of the included starters.
