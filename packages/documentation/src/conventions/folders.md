@@ -6,6 +6,11 @@ route: /conventions/folders
 
 # 📦 Folder Structure
 
+- [Overview](#overview)
+  - [Folders for barebones webapp](#folders-for-barebones-webapp)
+  - [Folders for storing data](#folders-for-storing-data)
+  - [Folders for scaling project](#folders-for-scaling-project)
+  - [Folders for state management](#folders-for-state-management)
 - [📡 Data](#%F0%9F%93%A1-data)
   - [Flat-file database](#flat-file-database)
   - [Constants](#constants)
@@ -29,14 +34,24 @@ route: /conventions/folders
 
 The project is broken into encapsulated semantic units each starting at their broadest level from the `/src/` folder downwards.
 
+## Overview
+
 Everything outside of the `/src/` folder can be considered workflow configuration files (these include files like `jest.config.js`, `package.json` and `.eslintrc`) and should not be considered as part of the above organisational pattern. It can be assumed that all files outside of `src/` is not used in the code itself but rather as configuration used by a specific NPM scripts (for example `yarn test:lint`) or third-party integrations (for example `.travisrc`).
 
+### Folders for barebones webapp
+
 Even the most barebones webapp (at the very least) needs [👀 Views](#%F0%9F%91%80-views) to render pieces of UI. However, you will also need to send these views to the user either through [🔌 Adaptors](#%F0%9F%94%8C-adaptors) when you are using existing server-side templating or via [📪 Pages](#%F0%9F%93%AA-pages) if you are using GatsbyJS to generate static HTML files.
+
+### Folders for storing data
 
 In addition as the project grows we probably don't want to hardcode data straight into our views. This means that we will use a [📡 data](#%F0%9F%93%A1-data) folder to store our data `.json` (or `.md` if using GatsbyJS ) files. We can then import these directly into our code via ES Modules, or via GraphQL in Gatsby (we can even build pages programmatically based on data via [📬 Templates](#%F0%9F%93%AC-templates))
 In order to annotate our JSON data schema we might also want to add TypeScript declarations in [📐 Types](#%F0%9F%93%90-types). Complimentary to the data folder, we might also want to save all non-`.json` or non-`.md` files in [🧦 Assets](#%F0%9F%A7%A6-assets) - this would include media files, images, etc. Lastly, if we want non-tech contributors to manage, edit or create data we can use Netlify CMS via [👤 Cms](#%F0%9F%91%A4-cms) to spin up a serverless Git-based CMS.
 
+### Folders for scaling project
+
 Furthermore, in order to scale our UI as our code grows it might be worth break some of our views into smaller re-composable units. Firstly we can break pieces of UI in [♻️ Components](#%E2%99%BB%EF%B8%8F-components) that you can share amongst views. You might also want to break re-usable low-level design features (like font stacks or brand colors) into [⚙️ Tokens](#%E2%9A%99%EF%B8%8F-tokens) or functions that are shared amongst different modules into [🔨 Helpers](#%F0%9F%94%A8-helpers).
+
+### Folders for state management
 
 Once our project starts getting complex enough it might be worthile to add the following [🎠 Redux](#%F0%9F%8E%A0-redux) containing all Redux code used to save, load and manipulate global project state.
 
