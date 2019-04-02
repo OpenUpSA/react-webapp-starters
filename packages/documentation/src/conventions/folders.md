@@ -14,9 +14,15 @@ route: /conventions/folders
 - [🔨 Helpers](#%F0%9F%94%A8-helpers)
 - [📐 Types](#%F0%9F%93%90-types)
 - [👀 Views](#%F0%9F%91%80-views)
+  - [Presentation Files](#presentation-files)
+  - [State Files](#state-files)
+  - [Other Files](#other-files)
+  - [Folder Nesting](#folder-nesting)
 - [♻️ Components](#%E2%99%BB%EF%B8%8F-components)
 - [🔌 Adaptors](#%F0%9F%94%8C-adaptors)
 - [📪 Pages](#%F0%9F%93%AA-pages)
+  - [Hardcoded Props](#hardcoded-props)
+  - [Dynamic Props](#dynamic-props)
 - [📬 Templates](#%F0%9F%93%AC-templates)
 - [🎠 Redux](#%F0%9F%8E%A0-redux)
 - [👤 Cms](#%F0%9F%91%A4-cms)
@@ -203,7 +209,7 @@ For example a single view component might be either one of these:
 
 `/src/views` will be where the majority of our JSX component live (unless they are re-used by more than one views - then they can be moved to `src/components/`)
 
-**View Container Components**
+### Presentation Files
 
 It is generally good practice to seperate your components that output markup from your components that manage internal UI state. To learn more you can have a look at the [container component pattern](https://reactpatterns.com/#container-component) and it's counterpart the [function component](https://reactpatterns.com/#function-component) on [reactpatterns.com](https://reactpatterns.com).
 
@@ -251,6 +257,8 @@ export default type Tmood = 'sad' | 'neutral' | 'happy';
   }
 }
 ```
+
+### State Files
 
 However, currently the `mood` property is being passed straight into the `Greet` component. Let us say that we actaully want a user's `mood` property to be controlled from this view itself. The pattern above would require us to create a second component to manage the UI state, and furthermore in accordance with the [Airbnb Style Guide](https://github.com/airbnb/javascript/tree/master/react) we can only have one component per file.
 
@@ -307,6 +315,8 @@ views
 
 Not only does the above arrangement make for less coupling (seperation of concerns). It also makes it easy at a glance to get a feel for a view before you even open a single file.
 
+### Other Files
+
 However, as per the principle of [grouping by features and routes](https://reactjs.org/docs/faq-structure.html#grouping-by-features-or-routes), various other files can also be added into the component folder as needed. For example:
 
 ```powershell
@@ -350,7 +360,7 @@ views
 
 ```
 
-**Going Deeper**
+### Folder Nesting
 
 It is easy to see how view folders might get eventually start getting really cluttered. Therefore views can have sub-components folders nested inside them. For example:
 
@@ -392,7 +402,6 @@ views
 For all intents and purposes items in `/src/components/` follow the exact rules that items in `/src/views/` do with one exception: they are not bound to any specific view and can be re-used anywhere in the project that accepts React components (including in the `/src/cms` folder).
 
 For example let us say we have a `Button` component in `src/components`:
-
 
 ```
 components
@@ -458,7 +467,7 @@ To learn more about using `createElement` without JSX visit the [React API docum
 
 Generally there are two types of values you pass from a route to a view:
 
-**Hardcoded values**
+### Hardcoded Props
 
 You might have two routes that use the same view, but has minor changes. For example:
 
@@ -486,7 +495,7 @@ const render = () => {
 export default render();
 ```
 
-**Dynamic data**
+### Dynamic Props
 
 More often than not `/src/pages` is the point where dynamic information from `/src/data/` enters into views (unless they are imported directly via ES Modules).
 
