@@ -11,13 +11,13 @@ route: /
 To get started you might want to do one of the following:
 
 ## About
-- [⭐ Goals](/about/goals/)
-- [🚚 Roadmap](/about/roadmap/)
+- [⭐ Goals](/about/goals/): Read the underlying princples that guides the creation and development of existing and new starters.
+- [🚚 Roadmap](/about/roadmap/): See the upcoming features that will be included in upcoming starters or versions of starters.
 
 ## Conventions
-- [📦 Folders](/conventions/folders/)
+- [📦 Folders](/conventions/folders/): Learn the folder structure that is used throughout all starters. Recommended if you want to contribute to a project based on a starter.
 
 ## Guides
-- [🚀 Use a starter from scratch](/guides/start/)
+- [🚀 Use a starter from scratch](/guides/start/): Bootstrap a project with one of the included starters.
 
 
